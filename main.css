@@ -1,79 +1,173 @@
-@charset "utf-8";
 body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #42413C;
-	margin: 0;
-	padding: 0;
-	color: #000;
+        background-color:#black;
+
+        margin: 0;
+        padding: 0;
+        text-align:center;
+    }
+
+
+
+div {
+        font: verdana 12px #000;
+        position:relative;
+    }
+a {
+		text-decoration: none;
+	}
+#container {
+		background: url(images/background.jpg);
+        margin:0 auto;
+        padding:0 0px 0 0px;
+        position:relative;
+        width:750px;
+		height:100%;
+        text-align:left;
+        clear: both;
+		background-color:#FFFFFF;
+    }
+
+#naglowek {
+        background: #fff url(images/logo.jpg) no-repeat;
+        width:750px;
+        height:180px;
+        margin-bottom:0px;
+    }
+#menu {
+        background: #fff url(images/pasek.jpg) no-repeat;
+        width:auto;
+        height:33px;
+        margin-bottom:0px;
+		margin-top:-16px;
+	}
+#menu ul {
+		list-style: none;
+	}
+#menu li {
+		float: left;
+		padding-left:20px;
+		padding-top:5px;
+  		font-weight: bold;
+  		font-size: 14px;
+	}
+#menu a {
+		display: block;
+		line-height: 20px;
+		padding: 0 8px;
+		color: #fff;
+		font-weight: bold;
+	}
+#menu a:hover {
+		background: #fff;
+		color: #294b9d;
+	
+	}
+#lewy {
+        background: #fff url(images/tlo1.jpg) repeat;
+        width:160px;
+		height:100%;
+        float:left;
+		padding-left:0px;
+		margin-left:28px;
+	}
+#lewy dl {
+		margin: 0px;
+	}
+#lewy dt {
+		font-size: 12px;
+		color: #000;
+		background:url(images/menu.jpg) no-repeat;
+		font-weight: bold;
+		height:20px;
+		width:157px;
+		padding-top:6px;
+		text-align:center;
+	}
+#lewy dd {
+		font-size:13px;
+		margin-top:3px;
+		margin-left:6px;
+	}
+#lewy a {
+		font-size:14px;
+		color: #000000;
+		line-height: 150%;
+	}
+#lewy a:hover {
+		text-decoration:underline;
+}
+#bottom {
+		background: url(images/bottom.jpg) no-repeat;
+		width:160px;
+		height:8px;
+		margin-top:20px;
+}
+#srodek {
+	background: #fff url(images/tlo2.jpg) repeat;
+	width:710px;
+	height:auto;
+	float:left;
+	margin-left:25px;
+	margin-top:3px;
+	margin-bottom:40px;
+	}
+#srodek a {
+		color:#000000;
+		text-decoration:underline;
+}
+#srodek h2 {
+		padding-top:15px;
+		background-color:#FFFFFF;
+        font-size: 15px;
+		color: #294b9d;
+		line-height: 150%;
+		padding-left:15px;
+		margin-top:0px;
+	}
+#srodek p {
+		margin-bottom:8px;
+		text-indent: 15px;
+		text-align: justify;
+		padding-left:15px;
+		padding-right:5px;
+		padding-top:0px;
+		padding-bottom:4px;
+		font-size:12px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+	}
+#tlo2 {
+		background: url(images/tlo_2.jpg) repeat;
+		float:right;
+		width:27px;
+		height:400px;
+	}
+#stopka {
+        background: #f2f2f0 url(images/stopka.jpg) no-repeat;
+        clear:both;
+		font-size:11px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		height:28px;
+		color:#FFFFFF;
+		padding-top:8px;
+		padding-right:30px;
+	}
+#stopka a {
+		color: #FFFFFF;
+	}
+#stopka a:hover {
+		text-decoration:underline;
+	}
+#copyright {
+		float:left;
+		padding-left:340px;
+	}
+#design {
+		float:right;
 }
 
-/* ~~ Selektory elementów i znaczników ~~ */
-ul, ol, dl { /* Ze względu na różnice w zachowaniu przeglądarek, dobrą praktyką jest używanie marginesów i odstępów wewnętrznych o zerowej szerokości dla elementów typu lista. Aby ułatwić sobie zachowanie spójności, można określić pożądane wartości albo tutaj, albo w parametrach elementów listy (LI, DT, DD). Pamiętaj, że wszelkie wprowadzone tu wartości zostaną przeniesione kaskadowo na listy klasy .nav, chyba że utworzysz bardziej wyspecjalizowany selektor. */
-	padding: 0;
-	margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-	margin-top: 0;	 /* Usunięcie górnego marginesu pozwala obejść problem związany z uciekaniem marginesów z bloku DIV, w którym są zawarte. Pozostały margines dolny zapewni odstęp od kolejnych elementów. */
-	padding-right: 15px;
-	padding-left: 15px; /* Dodanie bocznych odstępów wewnętrznych (właściwość „padding”) do elementów umieszczanych wewnątrz bloku DIV — zamiast do samego bloku DIV — pozwala uniknąć konieczności przeprowadzania obliczeń położenia w modelu blokowym. Alternatywną metodą jest użycie zagnieżdżonego bloku DIV z odstępami wewnętrznymi po bokach. */
-}
-a img { /* Ten selektor usuwa domyślną, niebieską ramkę, wyświetlaną przez niektóre przeglądarki wokół obrazków otoczonych łączem. */
-	border: none;
-}
-/* ~~ Ostylowanie łączy serwisu musi być definiowane w podanej tu kolejności. Dotyczy to również grupy selektorów odpowiedzialnych za efekt „hover” (zmianę wyglądu łącza po umieszczeniu nad nim kursora) ~~ */
-a:link {
-	color: #42413C;
-	text-decoration: underline; /* Jeśli nie zamierzasz tworzyć łączy o wyjątkowo nietypowym wyglądzie, najlepiej zachować wyróżnienie graficzne w postaci podkreślenia, które pozwala na szybkie zidentyfikowanie łącza. */
-}
-a:visited {
-	color: #6E6C64;
-	text-decoration: underline;
-}
-a:hover, a:active, a:focus { /* Ta grupa selektorów jest odpowiedzialna za stworzenie efektu „hover” przy nawigacji za pomocą klawiatury, identycznego z efektem uzyskiwanym przez użytkownika korzystającego z myszy. */
-	text-decoration: none;
+/* h1 { color: #FFF}; */
+#naglowek1 {color:white;
+ width:auto;
+		height:auto;
 }
 
-/* ~~ Ten kontener o stałej szerokości otacza pozostałe bloki DIV ~~ */
-.container {
-	width: 960px;
-	background: #FFF;
-	margin: 0 auto; /* Wartość „auto” dla marginesów bocznych wraz z podaną wartością szerokości zapewnia wyśrodkowanie układu. */
-}
-
-/* ~~ Nagłówek nie ma określonej szerokości. Rozciągnie się na pełną szerokość układu. Zawiera zastępczy obraz, który trzeba zastąpić łączem do własnego logo. ~~ */
-.header {
-	background: #ADB96E;
-}
-
-/* ~~ Informacje dotyczące układu ~~ 
-
-1) Odstępy wewnętrzne (właściwość „padding”) dodaje się tylko na górze i/lub na dole bloku DIV. Elementy wewnątrz tego bloku DIV mają odstępy wewnętrzne po bokach. Pozwala to uniknąć konieczności skomplikowanego obliczania położenia w modelu blokowym. Należy pamiętać, że jeśli zdefiniujesz odstępy wewnętrzne lub krawędzie po bokach dla bloku DIV, to zostaną one dodane do zdefiniowanej szerokości bloku. Dlatego ostateczna szerokość całego bloku będzie inna. Możesz również usunąć odstępy wewnętrzne z elementu zawartego w bloku DIV i umieścić go w kolejnym bloku DIV bez zdefiniowanej szerokości, ale z podanymi odstępami wewnętrznymi.
-
-*/
-
-.content {
-
-	padding: 10px 0;
-}
-
-/* ~~ Stopka ~~ */
-.footer {
-	padding: 10px 0;
-	background: #CCC49F;
-}
-
-/* ~~ Różne klasy float/clear ~~ */
-.fltrt {  /* Ta klasa umożliwia tworzenie elementów pływających z prawej strony (właściwość „float:right”). Element pływający musi poprzedzać w kodzie element, obok którego ma się znajdować na stronie. */
-	float: right;
-	margin-left: 8px;
-}
-.fltlft { /* Ta klasa umożliwia tworzenie elementów pływających z lewej strony (właściwość „float:left”). Element pływający musi poprzedzać w kodzie element, obok którego ma się znajdować na stronie. */
-	float: left;
-	margin-right: 8px;
-}
-.clearfloat { /* Tę klasę można wykorzystać w znaczniku <br /> lub pustym bloku DIV, który stanowi ostatni element za ostatnim pływającym blokiem DIV (wewnątrz bloku o identyfikatorze #container), jeśli usunięto blok #footer lub przeniesiono go poza blok #container. */
-	clear:both;
-	height:0;
-	font-size: 1px;
-	line-height: 0px;
-}
